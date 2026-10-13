@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dangote Supermarket &amp; Groceries</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="#" aria-label="Dangote Supermarket home">
+            <img src="dangote.png" alt="Dangote Supermarket">
+        </a>
+        <p class="tagline">Where quality meets assurance!</p>
+    </header>
+
+    <main class="page-content">
+        <section class="search-panel" aria-label="Product search">
+            <div class="search-controls">
+                <input id="search-bar" type="search" placeholder="Search for products..." aria-label="Search for products">
+                <button id="search-button" type="button">Search</button>
+            </div>
+            <p class="search-message" role="status" aria-live="polite" hidden>Your search is on the way</p>
+
+            <div class="history-panel">
+                <div class="history-heading">
+                    <h2>Recent searches</h2>
+                    <button id="clear-search-history" class="button-secondary" type="button">Clear history</button>
+                </div>
+                <ul id="search-history"></ul>
+            </div>
+        </section>
+
+        <section class="welcome-panel">
+            <p class="eyebrow">Welcome to Dangote</p>
+            <h1>Your everyday essentials, all in one place.</h1>
+            <p>Browse our selection of groceries and household favorites, and enjoy a simple shopping experience.</p>
+        </section>
+
+        <section class="products-section" aria-labelledby="products-heading">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Good picks, great value</p>
+                    <h2 id="products-heading">Available in stock</h2>
+                </div>
+            </div>
+            <div id="images" class="product-grid">
+                <article class="product-card">
+                    <img src="diapers.jpeg" alt="Pack of diapers">
+                    <div class="product-details">
+                        <h3>Diapers</h3>
+                        <p class="product-price">$10.99</p>
+                        <button class="add-to-cart" type="button" data-price-cents="1099">Add to cart</button>
+                        <p class="cart-message" role="status" aria-live="polite" hidden>Item added to cart</p>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="milk.jpeg" alt="Milk">
+                    <div class="product-details">
+                        <h3>Milk</h3>
+                        <p class="product-price">$2.55</p>
+                        <button class="add-to-cart" type="button" data-price-cents="255">Add to cart</button>
+                        <p class="cart-message" role="status" aria-live="polite" hidden>Item added to cart</p>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="bread.jpeg" alt="Loaf of bread">
+                    <div class="product-details">
+                        <h3>Bread</h3>
+                        <p class="product-price">$1.99</p>
+                        <button class="add-to-cart" type="button" data-price-cents="199">Add to cart</button>
+                        <p class="cart-message" role="status" aria-live="polite" hidden>Item added to cart</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="cart-summary" aria-labelledby="cart-heading">
+            <div>
+                <p class="eyebrow">Ready when you are</p>
+                <h2 id="cart-heading">Your cart</h2>
+            </div>
+            <div class="cart-totals">
+                <p id="total-goods">Total goods: 0</p>
+                <p id="total-price">Total price: $0.00</p>
+            </div>
+        </section>
+    </main>
+    <script src="../inventory.js"></script>
+</body>
+</html>
